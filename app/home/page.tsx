@@ -23,7 +23,7 @@ const Home = () => {
 					'--gap': 'calc(var(--padding) / 2)',
 				}}
 			>
-				<div className='flex min-h-lvh w-full flex-col gap-[--gap]'>
+				<div className='flex min-h-lvh w-full min-w-0 flex-col gap-[--gap]'>
 					<TopBar />
 					<Panel className='flex flex-col gap-[--gap] rounded rounded-b-2xl p-[--padding]'>
 						<GraphSection />
