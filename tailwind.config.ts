@@ -127,6 +127,11 @@ const config: Config = {
 				'slide-out-bottom':
 					'slide-out-bottom 0.5s theme(transitionTimingFunction.out) forwards',
 
+				'fade-in':
+					'fade-in 0.5s theme(transitionTimingFunction.out) backwards',
+				'fade-out':
+					'fade-out 0.2s theme(transitionTimingFunction.out-sine) forwards',
+
 				'accordion-open':
 					'accordion-open 0.5s theme(transitionTimingFunction.out) forwards',
 				'accordion-close':
@@ -328,6 +333,26 @@ const config: Config = {
 					},
 					'100%': {
 						height: '0',
+					},
+				},
+
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						display: 'none',
+					},
+					'100%': {
+						opacity: '1',
+					},
+				},
+
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+					},
+					'100%': {
+						opacity: '0',
+						display: 'none',
 					},
 				},
 			},
