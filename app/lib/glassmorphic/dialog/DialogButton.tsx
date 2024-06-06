@@ -15,11 +15,11 @@ export const DialogButton = ({
 			</DialogPrimitive.Trigger>
 			<DialogPrimitive.Portal>
 				<DialogPrimitive.Overlay
-					className='[&[data-state="closed"]]:animate-fade-out [&[data-state="open"]]:animate-fade-in
-						fixed inset-0 h-full w-full bg-fg-1/30'
+					className='fixed inset-0 h-full w-full bg-fg-1/30 [&[data-state="closed"]]:animate-fade-out
+						[&[data-state="open"]]:animate-fade-in'
 				/>
 				<DialogPrimitive.Content
-					className='group fixed left-1/2 top-1/2 w-full max-w-[380px] -translate-x-1/2
+					className='group fixed left-1/2 top-1/2 h-max w-full max-w-[380px] -translate-x-1/2
 						-translate-y-1/2 rounded'
 				>
 					{content}
