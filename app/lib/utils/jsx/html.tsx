@@ -1,11 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import {
-	type ElementType,
-	type ComponentPropsWithRef,
-	type ComponentPropsWithoutRef,
-	ReactElement,
-	type Ref,
-} from 'react';
+import { type ComponentPropsWithRef, type ElementType, type Ref } from 'react';
 
 export type El<T extends ElementType = any> = 0 extends 1 & T
 	? ComponentPropsWithRef<'b'> & { ref?: Ref<any> }
