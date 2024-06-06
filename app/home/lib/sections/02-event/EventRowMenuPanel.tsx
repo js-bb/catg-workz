@@ -23,7 +23,7 @@ const iconColumn2 = [
 	[ic_home, 'Home'],
 ];
 
-export const EventRowMenu = ({ className }: Props.WithClassName<{}>) => {
+export const EventRowMenuPanel = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<Panel className={clsx('p-4', className)}>
 			<div className='flex gap-2'>

@@ -1,22 +1,20 @@
 'use client';
 
-import { type Props } from '@/app/lib/utils/type/Props';
-import { type EventItem } from './EventItem';
 import { whenKeypressDoClick } from '@/app/lib/accessibility/whenKeypressDoClick';
 import { IconButton } from '@/app/lib/glassmorphic/button/IconButton';
+import { type Props } from '@/app/lib/utils/type/Props';
 import * as Accordion from '@radix-ui/react-accordion';
 import {
-	FileTextIcon,
+	CheckIcon,
 	ChevronDownIcon,
 	ChevronUpIcon,
-	MoreVerticalIcon,
-	CheckIcon,
 	EyeIcon,
+	FileTextIcon,
 	XIcon,
 } from 'lucide-react';
 import { useState, type ReactElement } from 'react';
-import { EventRowMenu } from './EventRowMenu';
-import * as Popover from '@radix-ui/react-popover';
+import { type EventItem } from './EventItem';
+import { EventRowMenuButton } from './EventRowMenuButton';
 
 const statusColors = {
 	accepted: '#34C759',
@@ -42,8 +40,6 @@ export const EventRow = ({
 	columns,
 	...item
 }: Props.WithClassName<{ id: string; columns: string[] } & EventItem>) => {
-	const [menuOpen, setMenuOpen] = useState(false);
-
 	return (
 		<Accordion.Item
 			value={id}
@@ -123,45 +119,7 @@ export const EventRow = ({
 							<ChevronUpIcon size='1rem' />
 						</IconButton>
 
-						<Popover.Root>
-							<Popover.Trigger asChild>
-								<IconButton
-									title='Menu'
-									className='ml-1'
-									sideOffset={15}
-									onClick={(e) => {
-										e.stopPropagation();
-										setMenuOpen(!menuOpen);
-									}}
-								>
-									<div className='flex w-2 justify-center'>
-										<MoreVerticalIcon
-											size='1rem'
-											className='flex-shrink-0'
-										/>
-									</div>
-								</IconButton>
-							</Popover.Trigger>
-							<Popover.Portal>
-								<Popover.Content
-									side='top'
-									sideOffset={10}
-									onOpenAutoFocus={(e) => {
-										e.preventDefault();
-									}}
-									className='[&[data-state="closed"][data-side="bottom"]]:animate-swipe-out-top
-										[&[data-state="closed"][data-side="left"]]:animate-swipe-out-right
-										[&[data-state="closed"][data-side="right"]]:animate-swipe-out-left
-										[&[data-state="closed"][data-side="top"]]:animate-swipe-out-bottom
-										[&[data-state="open"][data-side="bottom"]]:animate-swipe-in-top
-										[&[data-state="open"][data-side="left"]]:animate-swipe-in-right
-										[&[data-state="open"][data-side="right"]]:animate-swipe-in-left
-										[&[data-state="open"][data-side="top"]]:animate-swipe-in-bottom'
-								>
-									<EventRowMenu className='' />
-								</Popover.Content>
-							</Popover.Portal>
-						</Popover.Root>
+						<EventRowMenuButton className='ml-1' />
 					</td>
 				</tr>
 			</Accordion.Trigger>
