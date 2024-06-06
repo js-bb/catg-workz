@@ -14,7 +14,13 @@ export const MessageDialogPanel = ({
 	onSubmit?: El<'form'>['onSubmit'];
 }>) => {
 	return (
-		<Panel className={clsx('p-[--padding]', className)}>
+		<Panel
+			className={clsx(
+				`p-[--padding] group-[[data-state="closed"]]:animate-swipe-out-bottom
+				group-[[data-state="open"]]:animate-swipe-in-bottom`,
+				className,
+			)}
+		>
 			<DialogTitle>New Message</DialogTitle>
 			<DialogClose />
 			<form

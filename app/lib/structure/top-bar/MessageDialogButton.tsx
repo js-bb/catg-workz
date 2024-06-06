@@ -12,14 +12,7 @@ import { DialogButton } from '../../glassmorphic/dialog/DialogButton';
 
 export const MessageDialogButton = ({ className }: Props.WithClassName<{}>) => {
 	return (
-		<DialogButton
-			content={
-				<MessageDialogPanel
-					className='group-[&[data-state="closed"]]:animate-swipe-out-bottom
-						group-[&[data-state="open"]]:animate-swipe-in-bottom'
-				/>
-			}
-		>
+		<DialogButton content={<MessageDialogPanel />}>
 			<IconButton
 				href='#'
 				title='Messages'
