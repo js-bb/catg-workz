@@ -183,62 +183,62 @@ export const SF_Pro_Text = localFont({
 export const SF_Mono = localFont({
 	src: [
 		{
-			path: './sf-mono/sf-mono-Light.woff2',
+			path: './sf-mono/SF-Mono-Light.woff2',
 			weight: '300',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-LightItalic.woff2',
+			path: './sf-mono/SF-Mono-LightItalic.woff2',
 			weight: '300',
 			style: 'italic',
 		},
 		{
-			path: './sf-mono/sf-mono-regular.woff2',
+			path: './sf-mono/SF-Mono-Regular.woff2',
 			weight: '400',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-regularItalic.woff2',
+			path: './sf-mono/SF-Mono-RegularItalic.woff2',
 			weight: '400',
 			style: 'italic',
 		},
 		{
-			path: './sf-mono/sf-mono-medium.woff2',
+			path: './sf-mono/SF-Mono-Medium.woff2',
 			weight: '500',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-mediumItalic.woff2',
+			path: './sf-mono/SF-Mono-MediumItalic.woff2',
 			weight: '500',
 			style: 'italic',
 		},
 		{
-			path: './sf-mono/sf-mono-semibold.woff2',
+			path: './sf-mono/SF-Mono-Semibold.woff2',
 			weight: '600',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-semiboldItalic.woff2',
+			path: './sf-mono/SF-Mono-SemiboldItalic.woff2',
 			weight: '600',
 			style: 'italic',
 		},
 		{
-			path: './sf-mono/sf-mono-bold.woff2',
+			path: './sf-mono/SF-Mono-Bold.woff2',
 			weight: '700',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-boldItalic.woff2',
+			path: './sf-mono/SF-Mono-BoldItalic.woff2',
 			weight: '700',
 			style: 'italic',
 		},
 		{
-			path: './sf-mono/sf-mono-heavy.woff2',
+			path: './sf-mono/SF-Mono-Heavy.woff2',
 			weight: '900',
 			style: 'normal',
 		},
 		{
-			path: './sf-mono/sf-mono-heavyItalic.woff2',
+			path: './sf-mono/SF-Mono-HeavyItalic.woff2',
 			weight: '900',
 			style: 'italic',
 		},
