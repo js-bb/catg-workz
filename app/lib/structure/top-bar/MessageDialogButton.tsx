@@ -14,7 +14,6 @@ export const MessageDialogButton = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<DialogButton content={<MessageDialogPanel />}>
 			<IconButton
-				href='#'
 				title='Messages'
 				className={clsx('', className)}
 			>

@@ -14,7 +14,6 @@ export const CommentsDialogButton = ({
 	return (
 		<DialogButton content={<CommentsDialogPanel />}>
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Comments'
