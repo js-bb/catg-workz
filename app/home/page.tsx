@@ -1,29 +1,21 @@
-import Image from 'next/image';
-import { AmbientBackground } from '../lib/mock/background/AmbientBackground';
-import { LogoType } from '../lib/brand/logo/LogoType';
-import {
-	BellIcon,
-	HistoryIcon,
-	MailIcon,
-	PencilIcon,
-	PlusIcon,
-	RotateCwIcon,
-} from 'lucide-react';
+// TODO: don't make the whole route a client component
+// write our own alternative to radix's Tooltip that doesn't use
+// React.context
+'use client';
+
 import { Panel } from '../lib/glassmorphic/panel/Panel';
-import { TopBar } from '../lib/structure/top-bar/TopBar';
-import { Picker } from '../lib/glassmorphic/picker/Picker';
-import { Ripple } from '../lib/glassmorphic/button/Ripple';
-import { IconButton } from '../lib/glassmorphic/button/IconButton';
-import graph from './graph.png';
+import { AmbientBackground } from '../lib/mock/background/AmbientBackground';
 import { ToolBar } from '../lib/structure/tool-bar/ToolBar';
+import { TopBar } from '../lib/structure/top-bar/TopBar';
 import { GraphSection } from './lib/sections/01-graph/GraphSection';
 import { EventSection } from './lib/sections/02-event/EventSection';
 import { MetaverseSection } from './lib/sections/03-metaverse/MetaverseSection';
 import { HoustonSection } from './lib/sections/04-houston/HoustonSection';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
-export default function Home() {
+const Home = () => {
 	return (
-		<>
+		<Tooltip.Provider delayDuration={0}>
 			<AmbientBackground />
 			<div
 				className='relative flex gap-[--gap] p-[--padding]'
@@ -49,6 +41,8 @@ export default function Home() {
 					<ToolBar className='sticky top-[--padding]' />
 				</div>
 			</div>
-		</>
+		</Tooltip.Provider>
 	);
-}
+};
+
+export default Home;

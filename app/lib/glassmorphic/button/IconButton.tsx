@@ -66,27 +66,25 @@ export const IconButton = ({
 	);
 
 	return title ? (
-		<Tooltip.Provider delayDuration={0}>
-			<Tooltip.Root>
-				<Tooltip.Trigger asChild>{button}</Tooltip.Trigger>
-				<Tooltip.Portal>
-					<Tooltip.Content
-						className='[&[data-state="closed"][data-side="bottom"]]:animate-swipe-out-top
-							[&[data-state="closed"][data-side="left"]]:animate-swipe-out-right
-							[&[data-state="closed"][data-side="right"]]:animate-swipe-out-left
-							[&[data-state="closed"][data-side="top"]]:animate-swipe-out-bottom
-							[&[data-state="delayed-open"][data-side="bottom"]]:animate-swipe-in-top
-							[&[data-state="delayed-open"][data-side="left"]]:animate-swipe-in-right
-							[&[data-state="delayed-open"][data-side="right"]]:animate-swipe-in-left
-							[&[data-state="delayed-open"][data-side="top"]]:animate-swipe-in-bottom'
-						side={side}
-						sideOffset={sideOffset}
-					>
-						<Panel className='!bg-bg-3 p-2 px-3'>{title}</Panel>
-					</Tooltip.Content>
-				</Tooltip.Portal>
-			</Tooltip.Root>
-		</Tooltip.Provider>
+		<Tooltip.Root>
+			<Tooltip.Trigger asChild>{button}</Tooltip.Trigger>
+			<Tooltip.Portal>
+				<Tooltip.Content
+					className='[&[data-state="closed"][data-side="bottom"]]:animate-swipe-out-top
+						[&[data-state="closed"][data-side="left"]]:animate-swipe-out-right
+						[&[data-state="closed"][data-side="right"]]:animate-swipe-out-left
+						[&[data-state="closed"][data-side="top"]]:animate-swipe-out-bottom
+						[&[data-state="delayed-open"][data-side="bottom"]]:animate-swipe-in-top
+						[&[data-state="delayed-open"][data-side="left"]]:animate-swipe-in-right
+						[&[data-state="delayed-open"][data-side="right"]]:animate-swipe-in-left
+						[&[data-state="delayed-open"][data-side="top"]]:animate-swipe-in-bottom'
+					side={side}
+					sideOffset={sideOffset}
+				>
+					<Panel className='!bg-bg-3 p-2 px-3'>{title}</Panel>
+				</Tooltip.Content>
+			</Tooltip.Portal>
+		</Tooltip.Root>
 	) : (
 		button
 	);
