@@ -9,6 +9,8 @@ import Image from 'next/image';
 import ic_bell from './ic-bell.svg';
 import ic_clock_progress from './ic-clock-progress.svg';
 import ic_mail from './ic-mail.svg';
+import * as Dialog from '@radix-ui/react-dialog';
+import { MessagePopupButton } from './MessagePopupButton';
 
 export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -44,16 +46,9 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 					/>
 					<div className='absolute -right-0.5 -top-0.5 h-1.5 w-1.5 rounded-full bg-[#EA333E]' />
 				</IconButton>
-				<IconButton
-					href='#'
-					title='Messages'
-				>
-					<Image
-						src={ic_mail}
-						alt=''
-						className='h-6 w-6'
-					/>
-				</IconButton>
+
+				<MessagePopupButton />
+
 				<IconButton
 					href='#'
 					title='Notifications'
