@@ -1,15 +1,15 @@
 import { type Props } from '@/app/lib/utils/type/Props';
-import { Panel } from '../../glassmorphic/panel/Panel';
-import { IconButton } from '../../glassmorphic/button/IconButton';
-import ic_user_screen from './ic-user-screen.svg';
-import ic_tag_label from './ic-tag-label.svg';
-import ic_outside_link from './ic-outside-link.svg';
-import ic_monitor from './ic-monitor.svg';
-import ic_figure_walk from './ic-figure-walk.svg';
-import ic_command_chain from './ic-command-chain.svg';
-import ic_blog from './ic-blog.svg';
-import Image from 'next/image';
 import clsx from 'clsx';
+import Image from 'next/image';
+import { IconButton } from '../../glassmorphic/button/IconButton';
+import { Panel } from '../../glassmorphic/panel/Panel';
+import { CommentsDialogButton } from './CommentsDialogButton';
+import ic_command_chain from './ic-command-chain.svg';
+import ic_figure_walk from './ic-figure-walk.svg';
+import ic_monitor from './ic-monitor.svg';
+import ic_outside_link from './ic-outside-link.svg';
+import ic_tag_label from './ic-tag-label.svg';
+import ic_user_screen from './ic-user-screen.svg';
 
 export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -50,18 +50,7 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 					className='mx-auto h-6'
 				/>
 			</IconButton>
-			<IconButton
-				href='#'
-				side='left'
-				sideOffset={20}
-				title='Comments'
-			>
-				<Image
-					src={ic_blog}
-					alt=''
-					className='mx-auto h-6'
-				/>
-			</IconButton>
+			<CommentsDialogButton />
 			<IconButton
 				href='#'
 				side='left'

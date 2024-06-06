@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { IconButton } from '@/app/lib/glassmorphic/button/IconButton';
 import { ExpandIcon, MoreHorizontalIcon, RotateCwIcon } from 'lucide-react';
 import amanda from '@/app/lib/mock/profile/amanda.png';
-import chat_bubble_tail from './chat-bubble-tail.svg';
+import { ChatBubble } from '@/app/lib/glassmorphic/chat/ChatBubble';
 
 export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -44,22 +44,18 @@ export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {
 			</div>
 
 			<div className='flex w-full flex-col gap-4'>
-				<div className='flex justify-end gap-4'>
-					<div className='relative max-w-56 rounded bg-[#2B2D2B] p-4 text-md'>
-						Houston, we have a problem! Help me find Teanna’s
-						contact.
+				<ChatBubble
+					className='max-w-56'
+					profile={
 						<Image
-							src={chat_bubble_tail}
+							src={amanda}
 							alt=''
-							className='absolute -right-[5px] bottom-0'
+							className='h-10 w-10 rounded-full border border-white/30 object-cover'
 						/>
-					</div>
-					<Image
-						src={amanda}
-						alt=''
-						className='h-10 w-10 rounded-full border border-white/30 object-cover'
-					/>
-				</div>
+					}
+				>
+					Houston, we have a problem! Help me find Teanna’s contact.
+				</ChatBubble>
 				<Panel
 					className='relative flex-grow rounded-full text-md font-medium'
 					variant='inset'
