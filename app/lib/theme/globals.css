@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* fonts */
+		--font-display: var(--font-sf-pro-display), sans-serif;
+		--font-sans: var(--font-sf-pro), sans-serif;
+		--font-mono: var(--font-sf-mono), monospace;
+
+		/* layout */
+		--radius: 20px;
+		--padding: clamp(1rem, 5vw, 2rem);
+
+		/* colors */
+		--bg-1: 240 4% 5%;
+		--bg-2: 240 4% 10%;
+		--bg-3: 240 4% 14%;
+		--accent-1: 356 100% 82%;
+		--accent-2: 356 100% 72%;
+		--accent-3: 356 100% 66%;
+		--fg-1: 210 40% 96%;
+		--fg-2: 214 20% 88%;
+		--fg-3: 214 10% 80%;
+		--overlay: 0 0% 0%;
+	}
+}
+
+@layer components {
+	.h1 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1');
+		font-size: 1.5rem;
+		line-height: 0.85;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+	}
+
+	.h2 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1');
+		font-size: 1.125rem;
+		line-height: 0.9;
+		font-weight: 400;
+		letter-spacing: -0.01em;
+	}
+
+	.h3 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1/.7');
+		font-size: 1rem;
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+
+	.h4 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1/.7');
+		font-size: 0.75rem;
+		line-height: 1;
+		font-weight: 400;
+		letter-spacing: 0;
+	}
+
+	.h5 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1/.7');
+		font-size: 0.625rem;
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
+
+	.h6 {
+		font-family: var(--font-display);
+		color: theme('colors.fg-1/.7');
+		font-size: 0.5rem;
+		line-height: 1;
+		font-weight: 400;
+		letter-spacing: 0;
+	}
+}

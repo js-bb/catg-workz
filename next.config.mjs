@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	reactStrictMode: true,
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
+	experimental: {
+		turbo: {},
+	},
+};
 
 export default nextConfig;

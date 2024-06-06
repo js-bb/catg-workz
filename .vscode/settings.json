@@ -1,0 +1,144 @@
+{
+	"[tailwindcss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[postcss]": {
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[dockercompose]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[glsl]": {
+		"editor.defaultFormatter": "xaver.clang-format"
+	},
+	"[php]": {
+		"editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+	},
+	"editor.colorDecorators": true,
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	},
+	"typescript.preferences.importModuleSpecifierEnding": "minimal",
+	"typescript.preferences.importModuleSpecifier": "shortest",
+	"task.allowAutomaticTasks": "on",
+	"testing.automaticallyOpenPeekView": "never",
+	"stylelint.validate": ["css", "less", "postcss", "tailwindcss"],
+	"files.eol": "\n",
+	"files.associations": {
+		"*.pcss": "tailwindcss"
+	},
+	"tailwindCSS.experimental.classRegex": [
+		// tw`...`
+		"tw`([^`]*)",
+		// clsx(...)
+		// https://github.com/paolotiu/tailwind-intellisense-regex-list?tab=readme-ov-file#clsx
+		["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],
+		// headless ui
+		// https://github.com/paolotiu/tailwind-intellisense-regex-list?tab=readme-ov-file#headlessui-transition-react
+		"(?:enter|leave)(?:From|To)?=\\s*(?:\"|'|{`)([^(?:\"|'|`})]*)",
+		// class="..."
+		"class?\\s*=\\s*\"([^\"]*)"
+	],
+	"clang-format.executable": "${workspaceRoot}/node_modules/.bin/clang-format",
+	"intelephense.format.braces": "k&r",
+	"intelephense.stubs": [
+		"apache",
+		"bcmath",
+		"bz2",
+		"calendar",
+		"com_dotnet",
+		"Core",
+		"ctype",
+		"curl",
+		"date",
+		"dba",
+		"dom",
+		"enchant",
+		"exif",
+		"FFI",
+		"fileinfo",
+		"filter",
+		"fpm",
+		"ftp",
+		"gd",
+		"gettext",
+		"gmp",
+		"hash",
+		"iconv",
+		"imap",
+		"intl",
+		"json",
+		"ldap",
+		"libxml",
+		"mbstring",
+		"meta",
+		"mysqli",
+		"oci8",
+		"odbc",
+		"openssl",
+		"pcntl",
+		"pcre",
+		"PDO",
+		"pdo_ibm",
+		"pdo_mysql",
+		"pdo_pgsql",
+		"pdo_sqlite",
+		"pgsql",
+		"Phar",
+		"posix",
+		"pspell",
+		"random",
+		"readline",
+		"Reflection",
+		"session",
+		"shmop",
+		"SimpleXML",
+		"snmp",
+		"soap",
+		"sockets",
+		"sodium",
+		"SPL",
+		"sqlite3",
+		"standard",
+		"superglobals",
+		"sysvmsg",
+		"sysvsem",
+		"sysvshm",
+		"tidy",
+		"tokenizer",
+		"xml",
+		"xmlreader",
+		"xmlrpc",
+		"xmlwriter",
+		"xsl",
+		"Zend OPcache",
+		"zip",
+		"zlib",
+		"wordpress"
+	],
+	"javascript.preferences.useAliasesForRenames": false,
+	"typescript.preferences.useAliasesForRenames": false
+}
