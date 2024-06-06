@@ -22,10 +22,10 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 				className='relative flex-grow rounded-full text-md font-medium'
 				variant='inset'
 			>
-				<div className='absolute left-4 top-1/2 -translate-y-1/2'>
-					Search
-				</div>
-				<input className='h-10 w-full rounded-full bg-transparent' />
+				<input
+					className='h-10 w-full rounded-full bg-transparent px-4'
+					placeholder='Search'
+				/>
 				<div className='absolute right-4 top-1/2 -translate-y-1/2'>
 					<RotateCwIcon size='1em' />
 				</div>
