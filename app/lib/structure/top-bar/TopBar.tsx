@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import { RotateCwIcon } from 'lucide-react';
 import Image from 'next/image';
 import { HistoryButton } from './HistoryButton';
-import { MessagePopupButton } from './MessagePopupButton';
+import { MessageDialogButton } from './MessageDialogButton';
 import { NotificationButton } from './NotificationButton';
 
 export const TopBar = ({ className }: Props.WithClassName<{}>) => {
@@ -32,7 +32,7 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 			</Panel>
 			<div className='flex flex-shrink-0 gap-5'>
 				<HistoryButton />
-				<MessagePopupButton />
+				<MessageDialogButton />
 				<NotificationButton />
 			</div>
 			<div className='flex h-full flex-shrink-0 items-center gap-4'>

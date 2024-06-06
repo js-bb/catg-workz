@@ -1,21 +1,22 @@
 import clsx from 'clsx';
-import { type ReactElement } from 'react';
+import { type ReactNode } from 'react';
 import { Ripple } from '../../glassmorphic/button/Ripple';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type El } from '../../utils/jsx/html';
 import { type Props } from '../../utils/type/Props';
+import { DialogClose } from '../../glassmorphic/dialog/DialogClose';
+import { DialogTitle } from '../../glassmorphic/dialog/DialogTitle';
 
-export const MessagePopupPanel = ({
+export const MessageDialogPanel = ({
 	className,
-	heading,
 	onSubmit,
 }: Props.WithClassName<{
-	heading: ReactElement;
 	onSubmit?: El<'form'>['onSubmit'];
 }>) => {
 	return (
 		<Panel className={clsx('p-[--padding]', className)}>
-			{heading}
+			<DialogTitle>New Message</DialogTitle>
+			<DialogClose />
 			<form
 				className='flex flex-col gap-4 pt-4'
 				onSubmit={(e) => {
