@@ -5,13 +5,15 @@ import clsx from 'clsx';
 
 export const AmbientBackground = ({ className }: Props.WithClassName<{}>) => {
 	return (
-		<Image
-			src={bg}
-			alt=''
-			className={clsx(
-				'pointer-events-none fixed inset-0 -z-10 h-full w-full object-cover',
-				className,
-			)}
-		/>
+		<div className='pointer-events-none sticky top-0 h-0 w-full'>
+			<Image
+				src={bg}
+				alt=''
+				className={clsx(
+					'absolute inset-0 -z-10 h-lvh w-full object-cover',
+					className,
+				)}
+			/>
+		</div>
 	);
 };

@@ -29,7 +29,9 @@ export default function RootLayout({
 				SF_Mono.variable,
 			)}
 		>
-			<body className='font-sans text-base text-fg-1'>{children}</body>
+			<body className='font-sans text-base text-fg-1 [scrollbar-gutter:stable]'>
+				{children}
+			</body>
 		</html>
 	);
 }
