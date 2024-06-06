@@ -8,6 +8,7 @@ import amanda from '@/app/lib/mock/profile/amanda.png';
 import { ChatBubble } from '../../glassmorphic/chat/ChatBubble';
 import Image from 'next/image';
 import { Ripple } from '../../glassmorphic/button/Ripple';
+import { DialogClose } from '../../glassmorphic/dialog/DialogClose';
 
 export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -19,6 +20,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
+			<DialogClose />
 			<div className=''>
 				<DialogTitle>Comments</DialogTitle>
 				<DialogDescription>EVENTZEVT</DialogDescription>
