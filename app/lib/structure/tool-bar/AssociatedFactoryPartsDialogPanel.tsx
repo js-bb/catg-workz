@@ -1,13 +1,12 @@
-import amanda from '@/app/lib/mock/profile/amanda.png';
-import man from '@/app/lib/mock/profile/man.png';
+import * as Accordion from '@radix-ui/react-accordion';
 import clsx from 'clsx';
-import Image from 'next/image';
-import { Ripple } from '../../glassmorphic/button/Ripple';
-import { ChatBubble } from '../../glassmorphic/chat/ChatBubble';
+import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from 'lucide-react';
+import { IconButton } from '../../glassmorphic/button/IconButton';
+import { Chip } from '../../glassmorphic/chip/Chip';
 import { DialogPanel } from '../../glassmorphic/dialog/DialogPanel';
+import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type Props } from '../../utils/type/Props';
-import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 
 export const AssociatedFactoryPartsDialogPanel = ({
 	className,
@@ -21,61 +20,65 @@ export const AssociatedFactoryPartsDialogPanel = ({
 			)}
 		>
 			<DialogPanelTitle>Associated Fatcory Parts</DialogPanelTitle>
-			<div className='flex h-full flex-col justify-end gap-6'>
-				<div className='w-full text-center text-sm text-fg-2'>
-					5 April 2024 3:45 pm
-				</div>
-				<div className='flex flex-col gap-4'>
-					<ChatBubble
-						variant='sender'
-						className='max-w-40'
-						profile={
-							<Image
-								src={man}
-								alt=''
-								className='h-10 w-10 rounded-full border border-white/30 object-cover'
-							/>
-						}
+			<Accordion.Root
+				type='multiple'
+				defaultValue={['eventzcmd']}
+			>
+				<Accordion.Item value='eventzcmd'>
+					<Accordion.Trigger className='group/trigger flex w-full items-center justify-between'>
+						<span className='font-bold'>EVENTZCMD</span>
+						<IconButton
+							variant='filled'
+							className='group-[&[data-state="open"]]/trigger:hidden'
+							title='Expand'
+						>
+							<ChevronDownIcon size='1rem' />
+						</IconButton>
+						<IconButton
+							variant='filled'
+							className='group-[&[data-state="closed"]]/trigger:hidden'
+							title='Collapse'
+						>
+							<ChevronUpIcon size='1rem' />
+						</IconButton>
+					</Accordion.Trigger>
+					<Accordion.Content
+						asChild
+						className=''
 					>
-						Can't wait to see the amazing results of the marketing
-						event after that productive meeting!
-					</ChatBubble>
-					<ChatBubble
-						variant='receiver'
-						className='max-w-40'
-						profile={
-							<Image
-								src={amanda}
-								alt=''
-								className='h-10 w-10 rounded-full border border-white/30 object-cover'
-							/>
-						}
-					>
-						I agree, good work on the presentation Andrea!
-					</ChatBubble>
-				</div>
-				<Panel
-					variant='inset'
-					className='rounded-full'
-				>
-					<input
-						id='message-subject'
-						type='text'
-						placeholder='Write a comment...'
-						className='h-10 w-full rounded-full bg-transparent px-4'
-					/>
-				</Panel>
-				<div className='flex w-full justify-center'>
-					<button
-						className='relative h-10 w-full max-w-[111px] rounded-full border border-fg-1/0
-							bg-[#0181FC] text-md transition-all ease-out hover:brightness-105
-							active:border-fg-1/30 active:brightness-110'
-					>
-						<Ripple className='absolute inset-0 rounded-full' />
-						Send
-					</button>
-				</div>
-			</div>
+						<div
+							className='flex flex-col gap-1 overflow-hidden
+								[&[data-state="closed"]]:animate-accordion-close
+								[&[data-state="open"]]:animate-accordion-open'
+						>
+							<div className='h-1 flex-shrink-0'></div>
+							{[
+								'C2PGUICAVA - C2P GUI Screens',
+								'C2PGUICAVA - C2P User List',
+								'C2PGUICAVA - C2P Button Inventory',
+							].map((name, i) => (
+								<div
+									key={i}
+									className='flex w-full items-center gap-2'
+								>
+									<Panel className='flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full'>
+										<CheckIcon size='1em' />
+									</Panel>
+									<span className='inline-block w-full'>
+										{name}
+									</span>
+									<Chip
+										variant='ok'
+										icon={<CheckIcon />}
+									>
+										Register
+									</Chip>
+								</div>
+							))}
+						</div>
+					</Accordion.Content>
+				</Accordion.Item>
+			</Accordion.Root>
 		</DialogPanel>
 	);
 };

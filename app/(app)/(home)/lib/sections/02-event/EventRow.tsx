@@ -2,8 +2,11 @@
 
 import { whenKeypressDoClick } from '@/app/lib/accessibility/whenKeypressDoClick';
 import { IconButton } from '@/app/lib/glassmorphic/button/IconButton';
+import { Chip } from '@/app/lib/glassmorphic/chip/Chip';
+import { tw } from '@/app/lib/utils/tailwind/tw';
 import { type Props } from '@/app/lib/utils/type/Props';
 import * as Accordion from '@radix-ui/react-accordion';
+import clsx from 'clsx';
 import {
 	CheckIcon,
 	ChevronDownIcon,
@@ -12,15 +15,15 @@ import {
 	FileTextIcon,
 	XIcon,
 } from 'lucide-react';
-import { useState, type ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import { type EventItem } from './EventItem';
 import { EventRowMenuButton } from './EventRowMenuButton';
 
-const statusColors = {
-	accepted: '#34C759',
-	deleted: '#02020228',
-	seen: '#0181FC',
-	register: '#34C759',
+const statusClassNames = {
+	accepted: tw`bg-green-500`,
+	deleted: tw``,
+	seen: tw`bg-accent-1`,
+	register: tw`bg-green-500`,
 } as const satisfies Record<EventItem['status'], string>;
 const statusIcons = {
 	accepted: <CheckIcon size='1em' />,
@@ -64,28 +67,26 @@ export const EventRow = ({
 								<div className='flex w-full items-center justify-between gap-2 font-display text-lg font-bold'>
 									{item[k]}
 								</div>
-								<div className='overflow-hidden'>
-									<Accordion.Content
-										className='pr-8 pt-2 [&[data-state="closed"]]:animate-accordion-close
-											[&[data-state="open"]]:animate-accordion-open'
+								<Accordion.Content asChild>
+									<div
+										className='overflow-hidden pr-8 pt-2 group-[&[data-state="closed"]]:animate-accordion-close
+											group-[&[data-state="open"]]:animate-accordion-open'
 									>
 										{item.description}
-									</Accordion.Content>
-								</div>
+									</div>
+								</Accordion.Content>
 							</td>
 						) : k === 'status' ? (
 							<td key={k}>
-								<div
-									className='flex w-max items-center gap-[0.125rem] rounded-full bg-[--color] px-3 py-1.5'
-									style={{
-										'--color': statusColors[item[k]],
-									}}
+								<Chip
+									icon={statusIcons[item[k]]}
+									className={clsx(
+										'',
+										statusClassNames[item[k]],
+									)}
 								>
-									{statusIcons[item[k]]}
-									<span className='inline-block'>
-										{statusStrings[item[k]]}
-									</span>
-								</div>
+									{statusStrings[item[k]]}
+								</Chip>
 							</td>
 						) : (
 							<td

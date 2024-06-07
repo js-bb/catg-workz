@@ -2,13 +2,13 @@ import amanda from '@/app/lib/mock/profile/amanda.png';
 import man from '@/app/lib/mock/profile/man.png';
 import clsx from 'clsx';
 import Image from 'next/image';
-import { Ripple } from '../../glassmorphic/button/Ripple';
+import { Button } from '../../glassmorphic/button/Button';
 import { ChatBubble } from '../../glassmorphic/chat/ChatBubble';
 import { DialogPanel } from '../../glassmorphic/dialog/DialogPanel';
+import { DialogPanelDescription } from '../../glassmorphic/dialog/DialogPanelDescription';
+import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type Props } from '../../utils/type/Props';
-import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
-import { DialogPanelDescription } from '../../glassmorphic/dialog/DialogPanelDescription';
 
 export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -31,7 +31,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 					<ChatBubble
 						variant='sender'
 						className='max-w-40'
-						profile={
+						avatar={
 							<Image
 								src={man}
 								alt=''
@@ -45,7 +45,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 					<ChatBubble
 						variant='receiver'
 						className='max-w-40'
-						profile={
+						avatar={
 							<Image
 								src={amanda}
 								alt=''
@@ -68,14 +68,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 					/>
 				</Panel>
 				<div className='flex w-full justify-center'>
-					<button
-						className='relative h-10 w-full max-w-[111px] rounded-full border border-fg-1/0
-							bg-[#0181FC] text-md transition-all ease-out hover:brightness-105
-							active:border-fg-1/30 active:brightness-110'
-					>
-						<Ripple className='absolute inset-0 rounded-full' />
-						Send
-					</button>
+					<Button variant='primary'>Send</Button>
 				</div>
 			</div>
 		</DialogPanel>

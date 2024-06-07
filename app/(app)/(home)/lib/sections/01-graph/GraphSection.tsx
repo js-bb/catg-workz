@@ -3,15 +3,20 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { EventTimelinePanel } from './EventTimelinePanel';
 import graph from './graph.png';
+import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
+import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
+import Link from 'next/link';
 
 export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<div className={clsx('flex flex-col gap-4', className)}>
 			<div className='flex flex-wrap justify-between gap-x-[10%] gap-y-4'>
 				<div className='flex flex-shrink flex-grow basis-0 flex-col'>
-					<div className='flex flex-col gap-2'>
-						<div className='h1'>Multiverse Data</div>
-						<div className='h4'>1 April 2024 - 30 April 2024</div>
+					<div>
+						<PanelTitle>Multiverse Data</PanelTitle>
+						<PanelDescription>
+							1 April 2024 - 30 April 2024
+						</PanelDescription>
 					</div>
 					<div className='flex flex-grow flex-col justify-center'>
 						<div className='flex flex-col gap-5'>
@@ -36,11 +41,13 @@ export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 					</div>
 				</div>
 				<div className='flex w-auto flex-shrink flex-grow basis-1/2 items-center justify-end'>
-					<Image
-						src={graph}
-						alt=''
-						className='h-full w-auto object-contain max-h-lv-[110lvh]'
-					/>
+					<Link href='/datum/EVENTZEVT'>
+						<Image
+							src={graph}
+							alt=''
+							className='w-full object-contain max-h-lv-[110lvh]'
+						/>
+					</Link>
 				</div>
 			</div>
 			<EventTimelinePanel />

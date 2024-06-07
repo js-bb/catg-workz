@@ -5,6 +5,7 @@ import { Panel } from '../../glassmorphic/panel/Panel';
 import { type El } from '../../utils/jsx/html';
 import { type Props } from '../../utils/type/Props';
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
+import { Button } from '../../glassmorphic/button/Button';
 
 export const MessageDialogPanel = ({
 	className,
@@ -23,12 +24,7 @@ export const MessageDialogPanel = ({
 				}}
 			>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-to'
-						className='text-md'
-					>
-						To:
-					</label>
+					<label htmlFor='message-to'>To:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'
@@ -41,12 +37,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-subject'
-						className='text-md'
-					>
-						Subject:
-					</label>
+					<label htmlFor='message-subject'>Subject:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'
@@ -59,12 +50,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-message'
-						className='text-md'
-					>
-						Message:
-					</label>
+					<label htmlFor='message-message'>Message:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'
@@ -76,14 +62,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex w-full justify-center'>
-					<button
-						className='relative h-10 w-full max-w-[111px] rounded-full border border-fg-1/0
-							bg-[#0181FC] text-md transition-all ease-out hover:brightness-105
-							active:border-fg-1/30 active:brightness-110'
-					>
-						<Ripple className='absolute inset-0 rounded-full' />
-						Send
-					</button>
+					<Button variant='primary'>Send</Button>
 				</div>
 			</form>
 		</DialogPanel>

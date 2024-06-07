@@ -46,7 +46,7 @@ export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {
 			<div className='flex w-full flex-col gap-4'>
 				<ChatBubble
 					className='max-w-56'
-					profile={
+					avatar={
 						<Image
 							src={amanda}
 							alt=''
@@ -57,7 +57,7 @@ export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {
 					Houston, we have a problem! Help me find Teanna’s contact.
 				</ChatBubble>
 				<Panel
-					className='relative flex-grow rounded-full text-md font-medium'
+					className='relative flex-grow rounded-full font-medium'
 					variant='inset'
 				>
 					<div className='absolute left-4 top-1/2 -translate-y-1/2'>
