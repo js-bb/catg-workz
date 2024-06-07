@@ -1,11 +1,11 @@
 const WelcomeBack = () => {
 	return (
 		<>
-			<div className='flex h-fit w-[472px] flex-col items-center px-4'>
-				<h1 className='pt-11 text-center text-[40px] font-medium leading-[74px]'>
+			<div className='flex h-fit w-[472px] flex-col items-center gap-6 pb-5 pt-16'>
+				<h1 className='text-center text-[40px] font-medium'>
 					Welcome Back!
 				</h1>
-				<p className='pb-3.5 text-center text-base font-normal leading-9'>
+				<p className='text-center text-base font-normal'>
 					Please enter your details to log in.
 				</p>
 			</div>

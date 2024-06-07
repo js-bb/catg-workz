@@ -5,11 +5,11 @@ import Form from './lib/sections/02-form/Form';
 
 const Login = () => {
 	return (
-		<div className='flex flex-col items-center justify-center'>
+		<div className='flex flex-col items-center justify-center gap-44'>
 			<AmbientBackground className='items-center justify-center' />
 			<Panel
-				className='mb-48 mt-44 flex w-[472px] flex-grow basis-[auto] flex-col flex-wrap
-					items-center justify-center'
+				className='flex w-[472px] flex-grow basis-[auto] flex-col flex-wrap items-center
+					justify-center'
 			>
 				<WelcomeBack />
 				<Form />
