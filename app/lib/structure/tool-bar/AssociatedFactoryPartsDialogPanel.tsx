@@ -8,9 +8,10 @@ import { DialogPanel } from '../../glassmorphic/dialog/DialogPanel';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type Props } from '../../utils/type/Props';
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
-import { DialogPanelDescription } from '../../glassmorphic/dialog/DialogPanelDescription';
 
-export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
+export const AssociatedFactoryPartsDialogPanel = ({
+	className,
+}: Props.WithClassName<{}>) => {
 	return (
 		<DialogPanel
 			className={clsx(
@@ -19,10 +20,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
-			<div className=''>
-				<DialogPanelTitle>Comments</DialogPanelTitle>
-				<DialogPanelDescription>EVENTZEVT</DialogPanelDescription>
-			</div>
+			<DialogPanelTitle>Associated Fatcory Parts</DialogPanelTitle>
 			<div className='flex h-full flex-col justify-end gap-6'>
 				<div className='w-full text-center text-sm text-fg-2'>
 					5 April 2024 3:45 pm

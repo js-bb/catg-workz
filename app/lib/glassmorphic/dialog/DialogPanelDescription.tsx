@@ -1,14 +1,17 @@
 import clsx from 'clsx';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { type Props } from '../../utils/type/Props';
+import { PanelDescription } from '../panel/PanelDescription';
 
-export const DialogDescription = ({
+export const DialogPanelDescription = ({
 	children,
 	className,
 }: Props.WithClassName.WithChildren<{}>) => {
 	return (
 		<DialogPrimitive.Description asChild>
-			<div className={clsx('h4 mt-2', className)}>{children}</div>
+			<PanelDescription className={clsx('', className)}>
+				{children}
+			</PanelDescription>
 		</DialogPrimitive.Description>
 	);
 };

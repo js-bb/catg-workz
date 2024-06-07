@@ -12,7 +12,7 @@ export const MetaverseSection = ({ className }: Props.WithClassName<{}>) => {
 			<div className='relative flex flex-col gap-2'>
 				<div className='h1 flex justify-between gap-8'>
 					Metaverse
-					<div className='flex h-0 items-center gap-1'>
+					<div className='flex h-0 gap-1'>
 						<IconButton
 							variant='filled'
 							title='Expand'

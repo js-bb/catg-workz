@@ -1,16 +1,15 @@
 import * as DialogPrimitive from '@radix-ui/react-dialog';
-import { type Props } from '../../utils/type/Props';
-import { IconButton } from '../button/IconButton';
-import { XIcon } from 'lucide-react';
 import clsx from 'clsx';
+import { type Props } from '../../utils/type/Props';
+import { PanelTitle } from '../panel/PanelTitle';
 
-export const DialogTitle = ({
+export const DialogPanelTitle = ({
 	children,
 	className,
 }: Props.WithChildren.WithClassName<{}>) => {
 	return (
 		<DialogPrimitive.Title asChild>
-			<div className={clsx('h1', className)}>{children}</div>
+			<PanelTitle className={clsx('', className)}>{children}</PanelTitle>
 		</DialogPrimitive.Title>
 	);
 };

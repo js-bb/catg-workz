@@ -1,20 +1,12 @@
-import { cast } from '@/app/lib/utils/type/cast';
 import clsx from 'clsx';
-import {
-	type ComponentPropsWithRef,
-	type ComponentPropsWithoutRef,
-	type ComponentProps,
-	type ElementType,
-	type HTMLProps,
-} from 'react';
 import { raise } from '../../utils/functional/raise';
+import { div, type El } from '../../utils/jsx/html';
 import { type Props } from '../../utils/type/Props';
-import { type El, div } from '../../utils/jsx/html';
 
 export const Panel = ({
-	variant = 'default',
 	className,
 	children,
+	variant = 'default',
 	as: Component = div.generic,
 	...rest
 }: Props.WithChildren.WithClassName.WithAs<
@@ -22,8 +14,6 @@ export const Panel = ({
 		variant?: 'default' | 'inset';
 	} & El
 >) => {
-	cast<ElementType<HTMLProps<HTMLDivElement>>>(Component);
-
 	return (
 		<Component
 			{...rest}

@@ -7,6 +7,8 @@ import clsx from 'clsx';
 import { PencilIcon } from 'lucide-react';
 import { type EventItem } from './EventItem';
 import { EventRow } from './EventRow';
+import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
+import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
 
 const columnNames = {
 	domain: 'Domain',
@@ -114,22 +116,19 @@ export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<Panel
 			className={clsx(
-				'flex w-full basis-[970px] p-[--padding]',
+				'flex w-full basis-[970px] flex-col gap-10 p-[--padding]',
 				className,
 			)}
 		>
+			<PanelTitle className='flex items-center gap-2'>
+				Event
+				<PencilIcon
+					className='inline'
+					size='0.7em'
+				/>
+			</PanelTitle>
+			<PanelDescription>1 April 2024 - 30 April 2024</PanelDescription>
 			<div className='flex w-full flex-col gap-10 text-md'>
-				<div className='flex flex-col gap-2'>
-					<div className='h1 flex items-center gap-2'>
-						Event
-						<PencilIcon
-							className='inline'
-							size='0.7em'
-						/>
-					</div>
-					<div className='h4'>1 April 2024 - 30 April 2024</div>
-				</div>
-
 				<Accordion.Root
 					type='multiple'
 					className='-mx-8 -my-8 overflow-x-auto'
