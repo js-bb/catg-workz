@@ -8,17 +8,12 @@ import { raise } from '../../utils/functional/raise';
 import { Panel } from '../panel/Panel';
 import { Ripple } from './Ripple';
 import { type El } from '../../utils/jsx/html';
-
-const ButtonOrAnchor = (
-	props:
-		| ComponentPropsWithoutRef<'button'>
-		| (ComponentPropsWithoutRef<'a'> & { href: string }),
-) => ('href' in props ? <a {...props} /> : <button {...props} />);
+import { AsButtonOrAnchor } from './AsButtonOrAnchor';
 
 export const IconButton = ({
 	className,
 	children,
-	as: Component = ButtonOrAnchor,
+	as: Component,
 	title,
 	variant = 'default',
 	side = 'top',
@@ -33,6 +28,8 @@ export const IconButton = ({
 	} & El<'button'> &
 		El<'a'>
 >) => {
+	Component ??= AsButtonOrAnchor;
+
 	const button = (
 		<Component
 			{...rest}

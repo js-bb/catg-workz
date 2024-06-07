@@ -10,6 +10,7 @@ import ic_monitor from './ic-monitor.svg';
 import ic_outside_link from './ic-outside-link.svg';
 import ic_tag_label from './ic-tag-label.svg';
 import ic_user_screen from './ic-user-screen.svg';
+import { AssociatedFactoryPartsDialogButton } from './AssociatedFactoryPartsDialogButton';
 
 export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -38,18 +39,7 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 					className='mx-auto h-6'
 				/>
 			</IconButton>
-			<IconButton
-				href='#'
-				side='left'
-				sideOffset={20}
-				title='Associated Factory Parts'
-			>
-				<Image
-					src={ic_command_chain}
-					alt=''
-					className='mx-auto h-6'
-				/>
-			</IconButton>
+			<AssociatedFactoryPartsDialogButton />
 			<CommentsDialogButton />
 			<IconButton
 				href='#'

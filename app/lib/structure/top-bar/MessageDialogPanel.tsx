@@ -5,6 +5,7 @@ import { Panel } from '../../glassmorphic/panel/Panel';
 import { type El } from '../../utils/jsx/html';
 import { type Props } from '../../utils/type/Props';
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
+import { Button } from '../../glassmorphic/button/Button';
 
 export const MessageDialogPanel = ({
 	className,
@@ -76,14 +77,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex w-full justify-center'>
-					<button
-						className='relative h-10 w-full max-w-[111px] rounded-full border border-fg-1/0
-							bg-[#0181FC] text-md transition-all ease-out hover:brightness-105
-							active:border-fg-1/30 active:brightness-110'
-					>
-						<Ripple className='absolute inset-0 rounded-full' />
-						Send
-					</button>
+					<Button variant='primary'>Send</Button>
 				</div>
 			</form>
 		</DialogPanel>
