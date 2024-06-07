@@ -19,8 +19,7 @@ const WelcomeBack = () => {
 				<label className='inline-flex items-center'>
 					<input
 						type='checkbox'
-						className='h-[17px] w-[17px] appearance-none rounded-full p-3 backdrop-blur
-							checked:bg-black/20'
+						className='h-3.5 w-3.5 appearance-none rounded-full p-3 backdrop-blur checked:bg-black/20'
 					/>
 					<span className='ml-2 text-base leading-9'>
 						{' '}
