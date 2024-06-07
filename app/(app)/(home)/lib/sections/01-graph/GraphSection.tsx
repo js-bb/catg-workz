@@ -5,6 +5,7 @@ import { EventTimelinePanel } from './EventTimelinePanel';
 import graph from './graph.png';
 import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
 import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
+import Link from 'next/link';
 
 export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -40,11 +41,13 @@ export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 					</div>
 				</div>
 				<div className='flex w-auto flex-shrink flex-grow basis-1/2 items-center justify-end'>
-					<Image
-						src={graph}
-						alt=''
-						className='h-full w-auto object-contain max-h-lv-[110lvh]'
-					/>
+					<Link href='/datum/EVENTZEVT'>
+						<Image
+							src={graph}
+							alt=''
+							className='w-full object-contain max-h-lv-[110lvh]'
+						/>
+					</Link>
 				</div>
 			</div>
 			<EventTimelinePanel />
