@@ -39,15 +39,16 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 				<div className='h3'>Hello, Amanda!</div>
 				<Panel
 					as={(props) => (
-						<Image
-							src={amanda}
-							alt='Profile picture'
-							{...props}
-							className={clsx(
-								props.className,
-								'h-10 w-10 rounded-full border border-white/30 object-cover',
-							)}
-						/>
+						<div {...props}>
+							<Image
+								src={amanda}
+								alt='Profile picture'
+								className={clsx(
+									props.className,
+									'h-10 w-10 rounded-full border border-white/30 object-cover',
+								)}
+							/>
+						</div>
 					)}
 				/>
 			</div>
