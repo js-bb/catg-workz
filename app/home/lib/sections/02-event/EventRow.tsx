@@ -67,14 +67,14 @@ export const EventRow = ({
 								<div className='flex w-full items-center justify-between gap-2 font-display text-lg font-bold'>
 									{item[k]}
 								</div>
-								<div className='overflow-hidden'>
-									<Accordion.Content
-										className='pr-8 pt-2 [&[data-state="closed"]]:animate-accordion-close
-											[&[data-state="open"]]:animate-accordion-open'
+								<Accordion.Content asChild>
+									<div
+										className='overflow-hidden pr-8 pt-2 group-[&[data-state="closed"]]:animate-accordion-close
+											group-[&[data-state="open"]]:animate-accordion-open'
 									>
 										{item.description}
-									</Accordion.Content>
-								</div>
+									</div>
+								</Accordion.Content>
 							</td>
 						) : k === 'status' ? (
 							<td key={k}>
