@@ -15,8 +15,8 @@ const AppLayout = ({ children }: Props.WithChildren<{}>) => {
 		<>
 			<AmbientBackground />
 			<Tooltip.Provider delayDuration={0}>
-				<div className='relative flex gap-[--gap] p-[--padding]'>
-					<div className='flex min-h-lvh w-full min-w-0 flex-col gap-[--gap]'>
+				<div className='relative flex min-h-lvh gap-[--gap] p-[--padding]'>
+					<div className='flex w-full min-w-0 flex-col gap-[--gap]'>
 						<TopBar />
 						{children}
 					</div>

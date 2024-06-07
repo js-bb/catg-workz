@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { HistoryButton } from './HistoryButton';
 import { MessageDialogButton } from './MessageDialogButton';
 import { NotificationButton } from './NotificationButton';
+import Link from 'next/link';
 
 export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -17,7 +18,9 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
-			<LogoType />
+			<Link href='/'>
+				<LogoType />
+			</Link>
 			<Panel
 				className='relative flex-grow rounded-full font-medium'
 				variant='inset'

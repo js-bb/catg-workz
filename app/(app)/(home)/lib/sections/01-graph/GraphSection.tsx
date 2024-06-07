@@ -28,7 +28,7 @@ export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 							</div>
 							<div className='flex flex-col gap-3'>
 								<div className='h-2 w-full rounded-full bg-[#575757]'>
-									<div className='h-full w-[65%] rounded-full bg-[#33C558]'></div>
+									<div className='h-full w-[65%] rounded-full bg-green-500'></div>
 								</div>
 								<div className='flex justify-between'>
 									<div className='text-fg-1/70'>
