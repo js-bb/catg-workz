@@ -133,7 +133,7 @@ const config: Config = {
 					'fade-out 0.2s theme(transitionTimingFunction.out-sine) forwards',
 
 				'accordion-open':
-					'accordion-open 0.5s theme(transitionTimingFunction.out) forwards',
+					'accordion-open 0.5s theme(transitionTimingFunction.out) backwards',
 				'accordion-close':
 					'accordion-close 0.5s theme(transitionTimingFunction.out) forwards',
 			},
@@ -322,6 +322,7 @@ const config: Config = {
 				'accordion-open': {
 					'0%': {
 						height: '0',
+						display: 'none',
 					},
 					'100%': {
 						height: 'var(--radix-accordion-content-height)',
@@ -333,6 +334,7 @@ const config: Config = {
 					},
 					'100%': {
 						height: '0',
+						display: 'none',
 					},
 				},
 
