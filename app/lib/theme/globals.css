@@ -12,6 +12,7 @@
 		/* layout */
 		--radius: 20px;
 		--padding: clamp(1rem, 5vw, 2rem);
+		--gap: calc(var(--padding) / 2);
 
 		/* colors */
 		--bg-1: 240 4% 5%;
