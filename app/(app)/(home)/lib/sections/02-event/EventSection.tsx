@@ -120,14 +120,18 @@ export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
-			<PanelTitle className='flex items-center gap-2'>
-				Event
-				<PencilIcon
-					className='inline'
-					size='0.7em'
-				/>
-			</PanelTitle>
-			<PanelDescription>1 April 2024 - 30 April 2024</PanelDescription>
+			<div className=''>
+				<PanelTitle className='flex items-center gap-2'>
+					Event
+					<PencilIcon
+						className='inline'
+						size='0.7em'
+					/>
+				</PanelTitle>
+				<PanelDescription>
+					1 April 2024 - 30 April 2024
+				</PanelDescription>
+			</div>
 			<div className='flex w-full flex-col gap-10'>
 				<Accordion.Root
 					type='multiple'
