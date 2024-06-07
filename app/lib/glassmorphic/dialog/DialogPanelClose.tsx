@@ -4,7 +4,7 @@ import { IconButton } from '../button/IconButton';
 import { type Props } from '../../utils/type/Props';
 import clsx from 'clsx';
 
-export const DialogClose = ({ className }: Props.WithClassName<{}>) => {
+export const DialogPanelClose = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<DialogPrimitive.Close asChild>
 			<IconButton
