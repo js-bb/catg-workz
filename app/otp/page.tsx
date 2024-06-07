@@ -1,7 +1,7 @@
 import { AmbientBackground } from '../lib/mock/background/AmbientBackground';
 import { Panel } from '../lib/glassmorphic/panel/Panel';
-import SentText from './lib/sections/01-sent/SentText';
-import Verification from './lib/sections/02-verification/Verification';
+import { SentText } from './lib/sections/01-sent/SentText';
+import { Verification } from './lib/sections/02-verification/Verification';
 
 const Login = () => {
 	return (

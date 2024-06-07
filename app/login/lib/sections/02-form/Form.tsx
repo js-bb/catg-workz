@@ -1,7 +1,7 @@
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
 import { Button } from '@/app/lib/glassmorphic/button/Button';
 
-const Form = () => {
+export const Form = () => {
 	return (
 		<>
 			<div className='flex w-full flex-grow flex-col justify-start gap-3 px-[60.5px]'>
@@ -44,5 +44,3 @@ const Form = () => {
 		</>
 	);
 };
-
-export default Form;

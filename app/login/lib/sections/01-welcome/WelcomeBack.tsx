@@ -1,4 +1,4 @@
-const WelcomeBack = () => {
+export const WelcomeBack = () => {
 	return (
 		<>
 			<div className='flex flex-grow flex-col items-center gap-7 pb-6 pt-16'>
@@ -12,5 +12,3 @@ const WelcomeBack = () => {
 		</>
 	);
 };
-
-export default WelcomeBack;

@@ -1,7 +1,7 @@
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
 import { Button } from '@/app/lib/glassmorphic/button/Button';
 
-const Verification = () => {
+export const Verification = () => {
 	return (
 		<>
 			<div className='flex w-full flex-grow flex-col justify-start gap-3 px-[60.5px]'>
@@ -33,5 +33,3 @@ const Verification = () => {
 		</>
 	);
 };
-
-export default Verification;
