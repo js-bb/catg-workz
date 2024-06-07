@@ -39,11 +39,11 @@ export const Button = ({
 				transition-all ease-out hover:brightness-105 active:brightness-110
 				active:transition-none`,
 				variant === 'default'
-					? 'bg-bg-2'
+					? '!bg-bg-2'
 					: variant === 'primary'
-						? 'active:accent-1 border-accent-2 bg-accent-1'
+						? 'active:accent-1 border-accent-2 !bg-accent-1'
 						: variant === 'outline'
-							? 'border-fg-1 bg-transparent'
+							? 'border-fg-1 !bg-transparent'
 							: raise(),
 				className,
 			)}
