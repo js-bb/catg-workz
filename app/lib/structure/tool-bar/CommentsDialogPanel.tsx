@@ -31,7 +31,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 					<ChatBubble
 						variant='sender'
 						className='max-w-40'
-						profile={
+						avatar={
 							<Image
 								src={man}
 								alt=''
@@ -45,7 +45,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 					<ChatBubble
 						variant='receiver'
 						className='max-w-40'
-						profile={
+						avatar={
 							<Image
 								src={amanda}
 								alt=''

@@ -9,10 +9,10 @@ export const ChatBubble = ({
 	className,
 	children,
 	variant = 'receiver',
-	profile,
+	avatar,
 }: Props.WithClassName.WithChildren<{
 	variant?: 'sender' | 'receiver';
-	profile?: ReactNode;
+	avatar?: ReactNode;
 }>) => {
 	return (
 		<div
@@ -25,7 +25,7 @@ export const ChatBubble = ({
 						: raise(),
 			)}
 		>
-			{variant === 'sender' && profile}
+			{variant === 'sender' && avatar}
 			<div
 				className={clsx(
 					'relative rounded p-4 text-md',
@@ -51,7 +51,7 @@ export const ChatBubble = ({
 					)}
 				/>
 			</div>
-			{variant === 'receiver' && profile}
+			{variant === 'receiver' && avatar}
 		</div>
 	);
 };

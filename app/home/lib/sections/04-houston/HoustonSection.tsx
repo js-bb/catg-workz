@@ -46,7 +46,7 @@ export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {
 			<div className='flex w-full flex-col gap-4'>
 				<ChatBubble
 					className='max-w-56'
-					profile={
+					avatar={
 						<Image
 							src={amanda}
 							alt=''
