@@ -8,8 +8,8 @@ const Login = () => {
 		<div className='flex h-full w-full flex-col items-center justify-center'>
 			<AmbientBackground className='items-center justify-center' />
 			<Panel
-				className='mt-44 flex w-1/4 flex-grow basis-[auto] flex-col flex-wrap items-center
-					justify-center'
+				className='mt-44 flex w-1/4 w-[472px] flex-grow basis-[auto] flex-col flex-wrap
+					items-center justify-center'
 			>
 				<WelcomeBack />
 				<Form />
