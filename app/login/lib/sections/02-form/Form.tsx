@@ -22,7 +22,7 @@ const WelcomeBack = () => {
 						className='h-[17px] w-[17px] appearance-none rounded-full p-3 backdrop-blur
 							checked:bg-black/20'
 					/>
-					<span className='ml-2 text-xs leading-9'>
+					<span className='ml-2 text-base leading-9'>
 						{' '}
 						Remember me on this device for 30 days
 					</span>
@@ -32,7 +32,7 @@ const WelcomeBack = () => {
 						className='mt-4 flex h-8 w-28 items-center justify-center gap-[0.125rem] rounded-full
 							bg-[#0181FC] px-3 py-1.5'
 					>
-						<span className='inline-block text-xs font-semibold'>
+						<span className='inline-block text-base font-semibold'>
 							Login
 						</span>
 					</button>
