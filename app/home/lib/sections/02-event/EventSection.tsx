@@ -132,7 +132,7 @@ export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 
 				<Accordion.Root
 					type='multiple'
-					className='-mx-8 -my-8'
+					className='-mx-8 -my-8 overflow-x-auto'
 				>
 					<table className='w-full border-separate border-spacing-x-8 border-spacing-y-8'>
 						<thead>

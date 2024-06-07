@@ -38,10 +38,11 @@ export const IconButton = ({
 			{...rest}
 			title={title}
 			className={clsx(
-				`relative inline-block h-max cursor-pointer rounded-full text-[1rem] ease-out
-				before:absolute before:inset-0 before:m-auto before:rounded-full before:border
-				before:border-fg-1/0 before:bg-fg-1/0 before:p-0 before:transition-all
-				hover:before:bg-fg-1/10 active:before:border-fg-1/30 active:before:bg-fg-1/20
+				`relative inline-block h-max flex-shrink-0 cursor-pointer rounded-full
+				text-[1rem] ease-out before:absolute before:inset-0 before:m-auto
+				before:rounded-full before:border before:border-fg-1/0 before:bg-fg-1/0
+				before:p-0 before:transition-all hover:before:bg-fg-1/10
+				active:before:border-fg-1/30 active:before:bg-fg-1/20
 				active:before:transition-none`,
 				variant === 'filled'
 					? 'rounded-full bg-fg-1/30 p-1.5 hover:before:inset-0 hover:before:p-0'
