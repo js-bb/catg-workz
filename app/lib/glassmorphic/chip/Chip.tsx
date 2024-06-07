@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { type Props } from '../../utils/type/Props';
 import { type ReactNode } from 'react';
 import { CheckIcon, CircleAlertIcon, TriangleAlertIcon } from 'lucide-react';
+import { raise } from '../../utils/functional/raise';
 
 export const Chip = ({
 	className,
@@ -21,7 +22,18 @@ export const Chip = ({
 	return (
 		<div
 			className={clsx(
-				'flex w-max items-center gap-[0.25rem] rounded-full bg-[#02020228] px-3 py-1.5',
+				'flex w-max items-center gap-[0.25rem] rounded-full px-3 py-1.5',
+				variant === 'default'
+					? 'bg-[#02020228]'
+					: variant === 'primary'
+						? 'bg-accent-1'
+						: variant === 'ok'
+							? 'bg-green-500'
+							: variant === 'warning'
+								? 'bg-yellow-500'
+								: variant === 'error'
+									? 'bg-red-500'
+									: raise(),
 				className,
 			)}
 		>
