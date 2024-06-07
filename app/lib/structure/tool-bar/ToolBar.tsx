@@ -16,7 +16,6 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<Panel className={clsx('flex w-max flex-col gap-6 p-4', className)}>
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Display'
@@ -28,7 +27,6 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 				/>
 			</IconButton>
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Share Screen'
@@ -42,7 +40,6 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 			<AssociatedFactoryPartsDialogButton />
 			<CommentsDialogButton />
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Open in New Tab'
@@ -54,7 +51,6 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 				/>
 			</IconButton>
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Tags'
@@ -66,7 +62,6 @@ export const ToolBar = ({ className }: Props.WithClassName<{}>) => {
 				/>
 			</IconButton>
 			<IconButton
-				href='#'
 				side='left'
 				sideOffset={20}
 				title='Display'
