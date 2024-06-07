@@ -4,7 +4,7 @@ import { EventSection } from './lib/sections/02-event/EventSection';
 import { MetaverseSection } from './lib/sections/03-metaverse/MetaverseSection';
 import { HoustonSection } from './lib/sections/04-houston/HoustonSection';
 
-const Home = () => {
+const HomePage = () => {
 	return (
 		<Panel className='flex flex-col gap-[--gap] rounded rounded-b-2xl p-[--padding]'>
 			<GraphSection />
@@ -19,4 +19,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default HomePage;
