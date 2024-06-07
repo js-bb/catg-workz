@@ -1,3 +1,5 @@
+'use client';
+
 import { AmbientBackground } from '../lib/mock/background/AmbientBackground';
 import { Panel } from '../lib/glassmorphic/panel/Panel';
 import WelcomeBack from './lib/sections/01-welcome/WelcomeBack';

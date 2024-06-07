@@ -1,7 +1,7 @@
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
 import { Button } from '@/app/lib/glassmorphic/button/Button';
 
-const WelcomeBack = () => {
+const Form = () => {
 	return (
 		<>
 			<div className='flex w-full flex-grow flex-col justify-start gap-3 px-[60.5px]'>
@@ -34,11 +34,7 @@ const WelcomeBack = () => {
 					</span>
 				</label>
 				<div className='flex justify-center p-6 pb-12'>
-					<Button
-						variant='primary'
-						// className='flex h-8 w-28 items-center justify-center gap-[0.125rem] rounded-full
-						// 	bg-[#0181FC] px-3 py-1.5'
-					>
+					<Button variant='primary'>
 						<span className='inline-block text-base font-semibold'>
 							Login
 						</span>
@@ -49,4 +45,4 @@ const WelcomeBack = () => {
 	);
 };
 
-export default WelcomeBack;
+export default Form;
