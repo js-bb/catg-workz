@@ -85,7 +85,7 @@ const rulesCommon = {
 			leadingUnderscore: 'forbid',
 			trailingUnderscore: 'forbid',
 			filter: {
-				regex: '(^\\d)|[^\\w$]',
+				regex: '(^\\d)|[^\\w$]|^$',
 				match: false,
 			},
 		},
