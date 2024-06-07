@@ -35,7 +35,7 @@ export const Button = ({
 			{...rest}
 			className={clsx(
 				`relative flex min-h-10 w-max min-w-28 items-center justify-center rounded-full
-				border px-[max(0.75rem,_var(--radius))] py-[0.7085rem] text-center text-md
+				border px-[max(0.75rem,_var(--radius))] py-[0.7085rem] text-center
 				transition-all ease-out hover:brightness-105 active:brightness-110
 				active:transition-none`,
 				variant === 'default'

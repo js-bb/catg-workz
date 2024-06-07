@@ -28,7 +28,7 @@ export const ChatBubble = ({
 			{variant === 'sender' && avatar}
 			<div
 				className={clsx(
-					'relative rounded p-4 text-md',
+					'relative rounded p-4',
 					variant === 'receiver'
 						? 'bg-[#2B2D2B] text-fg-1'
 						: variant === 'sender'

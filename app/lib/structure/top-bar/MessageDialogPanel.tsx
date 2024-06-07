@@ -24,12 +24,7 @@ export const MessageDialogPanel = ({
 				}}
 			>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-to'
-						className='text-md'
-					>
-						To:
-					</label>
+					<label htmlFor='message-to'>To:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'
@@ -42,12 +37,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-subject'
-						className='text-md'
-					>
-						Subject:
-					</label>
+					<label htmlFor='message-subject'>Subject:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'
@@ -60,12 +50,7 @@ export const MessageDialogPanel = ({
 					</Panel>
 				</div>
 				<div className='flex flex-col gap-2'>
-					<label
-						htmlFor='message-message'
-						className='text-md'
-					>
-						Message:
-					</label>
+					<label htmlFor='message-message'>Message:</label>
 					<Panel
 						variant='inset'
 						className='rounded-md'

@@ -38,7 +38,7 @@ export const EventTimelinePanel = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
-			<div className='text-md'>Event Timeline</div>
+			<div>Event Timeline</div>
 			<div className='flex items-center gap-2'>
 				<IconButton
 					variant='filled'

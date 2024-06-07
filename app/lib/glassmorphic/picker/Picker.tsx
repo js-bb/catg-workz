@@ -129,7 +129,7 @@ export const Picker = ({
 								}
 							}
 							className={clsx(
-								`relative -ml-3.5 flex h-full items-center rounded-full px-4 font-display text-md
+								`relative -ml-3.5 flex h-full items-center rounded-full px-4 font-display
 								font-medium`,
 								i === 0 && 'ml-0',
 							)}

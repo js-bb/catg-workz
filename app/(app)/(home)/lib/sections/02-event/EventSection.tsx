@@ -128,7 +128,7 @@ export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 				/>
 			</PanelTitle>
 			<PanelDescription>1 April 2024 - 30 April 2024</PanelDescription>
-			<div className='flex w-full flex-col gap-10 text-md'>
+			<div className='flex w-full flex-col gap-10'>
 				<Accordion.Root
 					type='multiple'
 					className='-mx-8 -my-8 overflow-x-auto'

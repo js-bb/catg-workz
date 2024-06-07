@@ -26,7 +26,7 @@ export const AssociatedFactoryPartsDialogPanel = ({
 			>
 				<Accordion.Item value='eventzcmd'>
 					<Accordion.Trigger className='group/trigger flex w-full items-center justify-between'>
-						<span className='text-md font-bold'>EVENTZCMD</span>
+						<span className='font-bold'>EVENTZCMD</span>
 						<IconButton
 							variant='filled'
 							className='group-[&[data-state="open"]]/trigger:hidden'

@@ -46,12 +46,12 @@ const config: Config = {
 				mono: 'var(--font-mono)',
 			},
 			fontSize: {
-				sm: ['8px', '10px'],
-				base: ['10px', '12px'],
-				md: ['12px', '16px'],
-				lg: ['16px', '20px'],
-				xl: ['18px', '24px'],
-				'2xl': ['20px', '28px'],
+				xs: ['8px', '10px'],
+				sm: ['10px', '12px'],
+				base: ['12px', '16px'],
+				md: ['16px', '20px'],
+				lg: ['18px', '24px'],
+				xl: ['20px', '28px'],
 			},
 			transitionTimingFunction: {
 				'in-sine': 'cubic-bezier(0.12, 0, 0.39, 0)',

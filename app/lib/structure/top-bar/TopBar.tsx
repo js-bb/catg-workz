@@ -19,7 +19,7 @@ export const TopBar = ({ className }: Props.WithClassName<{}>) => {
 		>
 			<LogoType />
 			<Panel
-				className='relative flex-grow rounded-full text-md font-medium'
+				className='relative flex-grow rounded-full font-medium'
 				variant='inset'
 			>
 				<input
