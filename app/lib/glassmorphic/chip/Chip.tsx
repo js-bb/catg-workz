@@ -21,7 +21,7 @@ export const Chip = ({
 	return (
 		<div
 			className={clsx(
-				`flex w-max items-center gap-[0.125rem] rounded-full bg-[#02020228] px-3 py-1.5
+				`flex w-max items-center gap-[0.25rem] rounded-full bg-[#02020228] px-3 py-1.5
 				text-md`,
 				className,
 			)}
