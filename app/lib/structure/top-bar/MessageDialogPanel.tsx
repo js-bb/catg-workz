@@ -32,7 +32,7 @@ export const MessageDialogPanel = ({
 						<input
 							id='message-to'
 							type='text'
-							className='h-10 w-full rounded-md bg-transparent'
+							className='h-10 w-full rounded-md bg-transparent px-4'
 						/>
 					</Panel>
 				</div>
@@ -45,7 +45,7 @@ export const MessageDialogPanel = ({
 						<input
 							id='message-subject'
 							type='text'
-							className='h-10 w-full rounded-md bg-transparent'
+							className='h-10 w-full rounded-md bg-transparent px-4'
 						/>
 					</Panel>
 				</div>
@@ -57,7 +57,7 @@ export const MessageDialogPanel = ({
 					>
 						<textarea
 							id='message-message'
-							className='h-36 min-h-10 w-full resize-y rounded-md bg-transparent'
+							className='h-36 min-h-10 w-full resize-y rounded-md bg-transparent px-4 py-4'
 						/>
 					</Panel>
 				</div>
