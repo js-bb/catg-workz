@@ -22,7 +22,7 @@ export const Chip = ({
 	return (
 		<div
 			className={clsx(
-				'flex w-max items-center gap-[0.25rem] rounded-full px-3 py-1.5',
+				'flex items-center justify-center gap-[0.25rem] rounded-full px-3 py-1.5',
 				variant === 'default'
 					? 'bg-[#02020228]'
 					: variant === 'primary'
