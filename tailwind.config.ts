@@ -49,8 +49,8 @@ const config: Config = {
 				xs: ['8px', '10px'],
 				sm: ['10px', '12px'],
 				base: ['12px', '16px'],
-				md: ['16px', '20px'],
-				lg: ['18px', '24px'],
+				md: ['14px', '18px'],
+				lg: ['16px', '20px'],
 				xl: ['20px', '28px'],
 			},
 			transitionTimingFunction: {
