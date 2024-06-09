@@ -41,8 +41,9 @@ export const Button = ({
 			{...rest}
 			className={clsx(
 				`relative flex min-h-10 w-max min-w-28 items-center justify-between gap-2
-				rounded-full border px-[max(0.75rem,_var(--radius))] py-[0.7085rem] text-center
-				transition-all duration-500 ease-out hover:brightness-105 active:brightness-110
+				overflow-hidden rounded-full border px-[max(0.75rem,_var(--radius))]
+				py-[0.7085rem] text-center transition-all duration-500 ease-out hover:shadow-md
+				hover:brightness-105 active:shadow-sm active:brightness-110
 				active:transition-none`,
 				variant === 'default'
 					? '!bg-bg-2'
@@ -54,7 +55,7 @@ export const Button = ({
 				className,
 			)}
 		>
-			<Ripple className='absolute inset-0 rounded-full' />
+			<Ripple className='absolute inset-0' />
 			{left ? (
 				<span className='-mt-[1px] inline-block [&>svg]:inline-block [&>svg]:h-[1em] [&>svg]:w-[1em]'>
 					{left}
