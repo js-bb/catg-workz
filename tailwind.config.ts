@@ -323,6 +323,7 @@ const config: Config = {
 					'0%': {
 						height: '0',
 						display: 'none',
+						paddingBlock: '0',
 					},
 					'100%': {
 						height: 'var(--radix-accordion-content-height)',
@@ -335,6 +336,7 @@ const config: Config = {
 					'100%': {
 						height: '0',
 						display: 'none',
+						paddingBlock: '0',
 					},
 				},
 
