@@ -12,17 +12,23 @@ export const Button = ({
 	children,
 	as: Component,
 	variant = 'default',
-	icon = null,
+	left = null,
+	right = null,
 	...rest
 }: Props.WithClassName.WithChildren.WithAs<
 	{
 		variant?: 'default' | 'primary' | 'outline';
-		icon?: ReactNode | null;
+		left?: ReactNode | null;
+		right?: ReactNode | null;
 	} & El<'button'> &
 		El<'a'> &
 		Omit<ComponentProps<typeof Panel>, 'variant' | 'className' | 'as'>
 >) => {
 	Component ??= AsButtonOrAnchor;
+	const hasLeft = Boolean(left);
+	const hasRight = Boolean(right);
+	if (left && !hasRight) right = <span />;
+	if (right && !hasLeft) left = <span />;
 
 	return (
 		<Panel
@@ -34,9 +40,9 @@ export const Button = ({
 			)}
 			{...rest}
 			className={clsx(
-				`relative flex min-h-10 w-max min-w-28 items-center justify-center rounded-full
-				border px-[max(0.75rem,_var(--radius))] py-[0.7085rem] text-center
-				transition-all ease-out hover:brightness-105 active:brightness-110
+				`relative flex min-h-10 w-max min-w-28 items-center justify-between gap-2
+				rounded-full border px-[max(0.75rem,_var(--radius))] py-[0.7085rem] text-center
+				transition-all duration-500 ease-out hover:brightness-105 active:brightness-110
 				active:transition-none`,
 				variant === 'default'
 					? '!bg-bg-2'
@@ -49,10 +55,26 @@ export const Button = ({
 			)}
 		>
 			<Ripple className='absolute inset-0 rounded-full' />
-			<span className='inline-block [&>svg]:inline-block [&>svg]:h-[1em] [&>svg]:w-[1em]'>
-				{icon}
+			{left ? (
+				<span className='-mt-[1px] inline-block [&>svg]:inline-block [&>svg]:h-[1em] [&>svg]:w-[1em]'>
+					{left}
+				</span>
+			) : (
+				<span />
+			)}
+			<span
+				className='inline-block font-medium leading-[0.9] text-fg-1/90
+					drop-shadow-[0_2px_2px_rgb(255_255_255_/_0.5)]'
+			>
+				{children}
 			</span>
-			<span className='inline-block'>{children}</span>
+			{right ? (
+				<span className='-mt-[1px] inline-block [&>svg]:inline-block [&>svg]:h-[1em] [&>svg]:w-[1em]'>
+					{right}
+				</span>
+			) : (
+				<span />
+			)}
 		</Panel>
 	);
 };
