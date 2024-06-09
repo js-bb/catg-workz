@@ -1,11 +1,11 @@
 import { type Props } from '@/app/lib/utils/type/Props';
 import Image from 'next/image';
-import houston from './houston.png';
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
 import clsx from 'clsx';
 import { IconButton } from '@/app/lib/glassmorphic/button/IconButton';
 import { ExpandIcon, MoreHorizontalIcon, RotateCwIcon } from 'lucide-react';
-import amanda from '@/app/lib/mock/profile/amanda.png';
+import houston from '@/app/lib/mock/avatar/houston.png';
+import amanda from '@/app/lib/mock/avatar/amanda.png';
 import { ChatBubble } from '@/app/lib/glassmorphic/chat/ChatBubble';
 
 export const HoustonSection = ({ className }: Props.WithClassName<{}>) => {

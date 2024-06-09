@@ -1,6 +1,6 @@
 import { LogoType } from '@/app/lib/brand/logo/LogoType';
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
-import amanda from '@/app/lib/mock/profile/amanda.png';
+import amanda from '@/app/lib/mock/avatar/amanda.png';
 import { type Props } from '@/app/lib/utils/type/Props';
 import clsx from 'clsx';
 import { RotateCwIcon } from 'lucide-react';

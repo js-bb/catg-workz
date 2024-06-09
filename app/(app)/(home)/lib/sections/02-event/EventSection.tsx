@@ -1,23 +1,35 @@
 'use client';
 
+import { IconButton } from '@/app/lib/glassmorphic/button/IconButton';
+import { Chip } from '@/app/lib/glassmorphic/chip/Chip';
+import { DataTable } from '@/app/lib/glassmorphic/data-table/DataTable';
+import { DataTableCell } from '@/app/lib/glassmorphic/data-table/DataTableCell';
+import { DataTableHeaderRow } from '@/app/lib/glassmorphic/data-table/DataTableHeaderRow';
+import { DataTableRow } from '@/app/lib/glassmorphic/data-table/DataTableRow';
+import { DataTableRowExpandButton } from '@/app/lib/glassmorphic/data-table/DataTableRowExpandButton';
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
-import { type Props } from '@/app/lib/utils/type/Props';
-import * as Accordion from '@radix-ui/react-accordion';
-import clsx from 'clsx';
-import { PencilIcon } from 'lucide-react';
-import { type EventItem } from './EventItem';
-import { EventRow } from './EventRow';
-import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
 import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
+import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
+import { type Props } from '@/app/lib/utils/type/Props';
+import clsx from 'clsx';
+import {
+	CheckIcon,
+	EyeIcon,
+	FileTextIcon,
+	PencilIcon,
+	XIcon,
+} from 'lucide-react';
+import { type ReactNode } from 'react';
+import { EventRowMenuButton } from './EventRowMenuButton';
 
-const columnNames = {
-	domain: 'Domain',
-	date: 'Date',
-	title: 'Title',
-	duration: 'Duration',
-	status: 'Status',
-} as const satisfies Partial<Record<keyof EventItem, string>>;
-const columns = Object.keys(columnNames) as (keyof typeof columnNames)[];
+type EventItem = {
+	domain: string;
+	date: string;
+	title: string;
+	duration: string;
+	status: 'accepted' | 'deleted' | 'seen' | 'register';
+	description: string;
+};
 
 const items = [
 	{
@@ -112,6 +124,41 @@ const items = [
 	},
 ] as const satisfies EventItem[];
 
+const statusChips = {
+	accepted: (
+		<Chip
+			variant='ok'
+			icon={<CheckIcon />}
+		>
+			Accepted
+		</Chip>
+	),
+	deleted: (
+		<Chip
+			variant='default'
+			icon={<XIcon />}
+		>
+			Deleted
+		</Chip>
+	),
+	seen: (
+		<Chip
+			variant='primary'
+			icon={<EyeIcon />}
+		>
+			Seen
+		</Chip>
+	),
+	register: (
+		<Chip
+			variant='ok'
+			icon={<CheckIcon />}
+		>
+			Register
+		</Chip>
+	),
+} as const satisfies Record<EventItem['status'], ReactNode>;
+
 export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
 		<Panel
@@ -132,37 +179,56 @@ export const EventSection = ({ className }: Props.WithClassName<{}>) => {
 					1 April 2024 - 30 April 2024
 				</PanelDescription>
 			</div>
-			<div className='flex w-full flex-col gap-10'>
-				<Accordion.Root
-					type='multiple'
-					className='-mx-8 -my-8 overflow-x-auto'
-				>
-					<table className='w-full border-separate border-spacing-x-8 border-spacing-y-8'>
-						<thead>
-							<tr>
-								{columns.map((k) => (
-									<th
-										key={k}
-										className='text-start font-normal text-fg-1/70'
-									>
-										{columnNames[k]}
-									</th>
-								))}
-							</tr>
-						</thead>
-						<tbody className='align-top'>
-							{items.map((item, i) => (
-								<EventRow
-									key={i}
-									id={`${i}`}
-									columns={columns}
-									{...item}
-								/>
-							))}
-						</tbody>
-					</table>
-				</Accordion.Root>
-			</div>
+			<DataTable
+				header={
+					<DataTableHeaderRow
+						columns={[
+							'Domain',
+							'Date',
+							'Title',
+							'Duration',
+							'Status',
+						]}
+					/>
+				}
+				defaultValue={['0']}
+			>
+				{items.map(
+					({ domain, date, duration, status, description }, i) => (
+						<DataTableRow
+							key={i}
+							id={String(i)}
+						>
+							<DataTableCell
+								className='relative w-full min-w-[200px]'
+								extraPost={description}
+							>
+								<div className='flex w-full items-center justify-between gap-2 font-display text-lg font-bold'>
+									{domain}
+								</div>
+							</DataTableCell>
+							<DataTableCell className='whitespace-nowrap'>
+								{date}
+							</DataTableCell>
+							<DataTableCell className='whitespace-nowrap'>
+								{duration}
+							</DataTableCell>
+							<DataTableCell>{statusChips[status]}</DataTableCell>
+							<DataTableCell className='flex items-center gap-2'>
+								<IconButton
+									variant='filled'
+									title='Read More'
+									className='!bg-accent-1'
+								>
+									<FileTextIcon size='1rem' />
+								</IconButton>
+								<DataTableRowExpandButton />
+								<EventRowMenuButton className='ml-1' />
+							</DataTableCell>
+						</DataTableRow>
+					),
+				)}
+			</DataTable>
 		</Panel>
 	);
 };

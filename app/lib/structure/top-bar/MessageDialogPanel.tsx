@@ -6,6 +6,7 @@ import { type El } from '../../utils/jsx/html';
 import { type Props } from '../../utils/type/Props';
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 import { Button } from '../../glassmorphic/button/Button';
+import { DialogPanelClose } from '../../glassmorphic/dialog/DialogPanelClose';
 
 export const MessageDialogPanel = ({
 	className,
@@ -15,6 +16,7 @@ export const MessageDialogPanel = ({
 }>) => {
 	return (
 		<DialogPanel className={clsx('p-[--padding]', className)}>
+			<DialogPanelClose />
 			<DialogPanelTitle>New Message</DialogPanelTitle>
 			<form
 				className='flex flex-col gap-4 pt-4'

@@ -1,55 +1,30 @@
 import { Breadcrumb } from '@/app/lib/glassmorphic/breadcrumb/Breadcrumb';
-import { Chip } from '@/app/lib/glassmorphic/chip/Chip';
 import { Panel } from '@/app/lib/glassmorphic/panel/Panel';
-import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
-import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
-import { PencilIcon } from 'lucide-react';
+import { InfoSection } from './lib/sections/01-info/InfoSection';
+import { VisualizationSection } from './lib/sections/02-visualization/VisualizationSection';
+import { TeamSection } from './lib/sections/03-team/TeamSection';
+import { AttachmentsSection } from './lib/sections/04-attachments/AttachmentsSection';
+import { ReturnsSection } from './lib/sections/05-returns/ReturnsSection';
+import { AssociatedRequestsSection } from './lib/sections/06-associated-requests/AssociatedRequestsSection';
+import { TransmittalDocumentsSection } from './lib/sections/07-trasmittal-documents/TransmittalDocumentsSection';
 
 export const generateStaticParams = () => [{ id: 'EVENTZEVT' }];
 
 const DatumIdPage = ({ params: { id } }: { params: { id: string } }) => {
 	return (
-		<Panel className='flex h-full flex-col gap-[--gap] rounded p-[--padding]'>
+		<Panel className='flex h-full flex-col gap-[--gap] rounded rounded-b-2xl p-[--padding]'>
 			<Breadcrumb segments={{ '/': 'Home', '': id }} />
-			<div className='flex h-full w-full max-w-[300px] flex-col'>
-				<div className='flex flex-col gap-4 py-[--padding]'>
-					<div className=''>
-						<PanelTitle className='flex items-center gap-2'>
-							{id}
-							<PencilIcon
-								className='inline'
-								size='0.7em'
-							/>
-						</PanelTitle>
-						<PanelDescription>
-							21 June 2024 2:00 pm - 21 June 2024 4:00 pm
-						</PanelDescription>
-					</div>
-					<div className='flex gap-2'>
-						<Chip variant='ok'>Accepted</Chip>
-						<Chip variant='error'>Urgent</Chip>
-					</div>
-				</div>
-				<div className='flex h-full flex-col justify-between gap-6 py-[--padding]'>
-					<div className='flex items-center gap-2'>
-						Description
-						<div className='flex gap-2'>
-							<Chip variant='ok'>Special Meeting</Chip>
-							<Chip variant='ok'>Quarterly</Chip>
-						</div>
-					</div>
-					<div className=''>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.
-					</div>
-					<div className='flex flex-col gap-2'>
-						<div className='h3 text-fg-1'>Limits</div>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua.
-					</div>
-				</div>
+			<div className='flex h-full flex-wrap gap-[--gap]'>
+				<InfoSection
+					name={id}
+					className='min-h-lv-[60vh]'
+				/>
+				<VisualizationSection className='w-1/3 flex-shrink flex-grow self-center p-8 h-lv-[50vh]' />
+				<TeamSection className='self-end' />
+				<AttachmentsSection className='flex-grow basis-0' />
+				<ReturnsSection className='flex-grow basis-1/2' />
+				<AssociatedRequestsSection className='flex-grow basis-1/2' />
+				<TransmittalDocumentsSection className='flex-grow basis-0' />
 			</div>
 		</Panel>
 	);

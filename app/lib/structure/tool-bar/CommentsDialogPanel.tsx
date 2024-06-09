@@ -1,5 +1,5 @@
-import amanda from '@/app/lib/mock/profile/amanda.png';
-import man from '@/app/lib/mock/profile/man.png';
+import amanda from '@/app/lib/mock/avatar/amanda.png';
+import man from '@/app/lib/mock/avatar/man.png';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { Button } from '../../glassmorphic/button/Button';
@@ -9,6 +9,7 @@ import { DialogPanelDescription } from '../../glassmorphic/dialog/DialogPanelDes
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type Props } from '../../utils/type/Props';
+import { DialogPanelClose } from '../../glassmorphic/dialog/DialogPanelClose';
 
 export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -19,6 +20,7 @@ export const CommentsDialogPanel = ({ className }: Props.WithClassName<{}>) => {
 				className,
 			)}
 		>
+			<DialogPanelClose />
 			<div className=''>
 				<DialogPanelTitle>Comments</DialogPanelTitle>
 				<DialogPanelDescription>EVENTZEVT</DialogPanelDescription>

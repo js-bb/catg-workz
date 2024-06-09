@@ -7,6 +7,7 @@ import { DialogPanel } from '../../glassmorphic/dialog/DialogPanel';
 import { DialogPanelTitle } from '../../glassmorphic/dialog/DialogPanelTitle';
 import { Panel } from '../../glassmorphic/panel/Panel';
 import { type Props } from '../../utils/type/Props';
+import { DialogPanelClose } from '../../glassmorphic/dialog/DialogPanelClose';
 
 export const AssociatedFactoryPartsDialogPanel = ({
 	className,
@@ -19,7 +20,8 @@ export const AssociatedFactoryPartsDialogPanel = ({
 				className,
 			)}
 		>
-			<DialogPanelTitle>Associated Fatcory Parts</DialogPanelTitle>
+			<DialogPanelClose />
+			<DialogPanelTitle>Associated Factory Parts</DialogPanelTitle>
 			<Accordion.Root
 				type='multiple'
 				defaultValue={['eventzcmd']}
