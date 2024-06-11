@@ -6,6 +6,7 @@ import graph from './graph.png';
 import { PanelTitle } from '@/app/lib/glassmorphic/panel/PanelTitle';
 import { PanelDescription } from '@/app/lib/glassmorphic/panel/PanelDescription';
 import Link from 'next/link';
+import { Ripple } from '@/app/lib/glassmorphic/button/Ripple';
 
 export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 	return (
@@ -41,7 +42,15 @@ export const GraphSection = ({ className }: Props.WithClassName<{}>) => {
 					</div>
 				</div>
 				<div className='flex w-auto flex-shrink flex-grow basis-1/2 items-center justify-end'>
-					<Link href='/datum/EVENTZEVT'>
+					<Link
+						href='/datum/EVENTZEVT'
+						className='relative block h-full w-full'
+					>
+						<Ripple
+							className='absolute inset-0
+								[mask-image:radial-gradient(ellipse_at_center,_#000_10%,_transparent_75%)]'
+							durationMax={1000}
+						/>
 						<Image
 							src={graph}
 							alt=''
