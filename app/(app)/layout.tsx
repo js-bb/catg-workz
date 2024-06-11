@@ -21,7 +21,7 @@ const AppLayout = ({ children }: Props.WithChildren<{}>) => {
 						{children}
 					</div>
 					<div className='relative'>
-						<div className='h-1/5'></div>
+						<div className='h-lv-[calc(100vh_-_35%)]'></div>
 						<ToolBar className='sticky top-[--padding]' />
 					</div>
 				</div>
