@@ -13,8 +13,7 @@ const nextConfig = {
 		turbo: {},
 	},
 	images: {
-		loader: 'custom',
-		loaderFile: './next-image-loader.ts',
+		unoptimized: true,
 	},
 };
 
