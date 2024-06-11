@@ -5,9 +5,9 @@
 @layer base {
 	:root {
 		/* fonts */
-		--font-display: var(--font-sf-pro-display), sans-serif;
+		--font-display: var(--font-sf-pro), sans-serif;
 		--font-sans: var(--font-sf-pro), sans-serif;
-		--font-mono: var(--font-sf-mono), monospace;
+		--font-mono: monospace;
 
 		/* layout */
 		--radius: 20px;

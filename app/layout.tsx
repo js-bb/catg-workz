@@ -1,12 +1,7 @@
 import type { Metadata } from 'next';
 import './lib/theme/globals.css';
 import clsx from 'clsx';
-import {
-	SF_Mono,
-	SF_Pro,
-	SF_Pro_Display,
-	SF_Pro_Text,
-} from './lib/theme/fonts';
+import { SF_Pro } from './lib/theme/fonts';
 import { type Props } from './lib/utils/type/Props';
 
 export const metadata: Metadata = {
@@ -19,10 +14,10 @@ const RootLayout = ({ children }: Props.WithChildren<{}>) => {
 		<html
 			lang='en'
 			className={clsx(
-				SF_Pro_Display.variable,
+				// SF_Pro_Display.variable,
 				// SF_Pro_Text.variable,
 				SF_Pro.variable,
-				SF_Mono.variable,
+				// SF_Mono.variable,
 			)}
 		>
 			<body className='font-sans text-base text-fg-1 [scrollbar-gutter:stable]'>
