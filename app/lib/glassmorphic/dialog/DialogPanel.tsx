@@ -29,7 +29,8 @@ export const DialogPanel = ({
 		<Panel
 			{...rest}
 			className={clsx(
-				`group-[[data-state="closed"]]:animate-swipe-out-bottom
+				`overflow-auto max-h-lv-[calc(100vh_-_var(--padding)_*_2)]
+				group-[[data-state="closed"]]:animate-swipe-out-bottom
 				group-[[data-state="open"]]:animate-swipe-in-bottom`,
 				className,
 			)}
