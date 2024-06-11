@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: 'export',
+	trailingSlash: true,
 	reactStrictMode: true,
 	typescript: {
 		ignoreBuildErrors: true,
@@ -9,6 +11,10 @@ const nextConfig = {
 	},
 	experimental: {
 		turbo: {},
+	},
+	images: {
+		loader: 'custom',
+		loaderFile: './next-image-loader.ts',
 	},
 };
 
